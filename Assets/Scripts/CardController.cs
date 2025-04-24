@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class CardController : MonoBehaviour
 {
+    private Boolean cardFlipped;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
