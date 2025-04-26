@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private List<GameObject> cardPrefabList;
     private Animator animatorCard;
     private Card cardPlayed;
+    private bool cardsObtained = false;
+    public bool isPlayed { get; set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,9 @@ public class PlayerController : MonoBehaviour
 
     public void ObtainCards()
     {
+        if (cardsObtained) return;
+        cardsObtained = true;
+
         List<Card> randomCards = GetRandomCards(deck, 3);
         int cardCount = 1;
         foreach (var card in randomCards)
@@ -34,7 +39,7 @@ public class PlayerController : MonoBehaviour
             hand.Add(card);
             GameObject newCard = Instantiate(cardPrefab, deckTransform);
             newCard.transform.localPosition = Vector3.zero;
-            FillDataCard(card, newCard);
+            FillDataCard(cardCount, card, newCard);
 
 
             Animator animatorCard = newCard.GetComponent<Animator>();
@@ -51,15 +56,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FillDataCard(Card card, GameObject cardPrefab)
+    private void FillDataCard(int id, Card card, GameObject cardPrefab)
     {
         CardController cardController = cardPrefab.GetComponent<CardController>();
         TextMeshProUGUI titleCard = cardPrefab.GetComponentInChildren<TextMeshProUGUI>();
+        cardController.id = id;
         titleCard.text = card.name;
-        cardController.CardName = card.name;
-        cardController.Description = card.description;
-        cardController.Weaks = card.weaks;
-        cardController.Strongs = card.strongs;
+        cardController.cardName = card.name;
+        cardController.description = card.description;
+        cardController.weaks = card.weaks;
+        cardController.strongs = card.strongs;
     }
 
     private List<Card> GetRandomCards(List<Card> source, int count)
