@@ -24,12 +24,6 @@ public class PlayerController : MonoBehaviour
         deckTransform = this.transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ObtainCards()
     {
         List<Card> randomCards = GetRandomCards(deck, 3);
@@ -62,6 +56,10 @@ public class PlayerController : MonoBehaviour
         CardController cardController = cardPrefab.GetComponent<CardController>();
         TextMeshProUGUI titleCard = cardPrefab.GetComponentInChildren<TextMeshProUGUI>();
         titleCard.text = card.name;
+        cardController.CardName = card.name;
+        cardController.Description = card.description;
+        cardController.Weaks = card.weaks;
+        cardController.Strongs = card.strongs;
     }
 
     private List<Card> GetRandomCards(List<Card> source, int count)
