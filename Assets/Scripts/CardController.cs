@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
 
 public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    public bool isPlayerControlled { get; set; }
     public int id { get; set; }
     public bool cardFlipped { get; set; }
     public string cardName { get; set; }
@@ -26,6 +25,8 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private void IncreaseScale(bool status)
     {
+        if (!isPlayerControlled) return;
+
         Vector3 finalScale = initialScale;
 
         if (status) finalScale = initialScale * 1.1f;
@@ -35,18 +36,24 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
+        if (!isPlayerControlled) return;
+
         Debug.Log("Enter mouse");
         IncreaseScale(true);
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
+        if (!isPlayerControlled) return;
+
         Debug.Log("Enter exit");
         IncreaseScale(false);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (!isPlayerControlled) return;
+
         if (playerController.isPlayed) return;
         playerController.isPlayed = true;
 
