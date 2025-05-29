@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11ef99ebc1be874f8c3c195bbdd31b0, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
+  sprite: {fileID: -2182124076254010665, guid: 545fdfebdb9f2fe478e0bb0901ccbd3b, type: 3}
   cardName: Rock
   description: Rock Description
   strongs:

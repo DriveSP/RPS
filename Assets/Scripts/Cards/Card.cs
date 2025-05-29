@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Card : ScriptableObject
 {
+    public Sprite sprite;
     public string cardName;
     public string description;
     public List<Card> strongs;

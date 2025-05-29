@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public abstract class CardDealer : MonoBehaviour
 {
@@ -53,8 +54,10 @@ public abstract class CardDealer : MonoBehaviour
     {
         CardController cardController = cardPrefab.GetComponent<CardController>();
         TextMeshProUGUI titleCard = cardPrefab.GetComponentInChildren<TextMeshProUGUI>();
+        Image spriteCard = cardPrefab.GetComponent<Image>();
         cardController.isPlayerControlled = isPlayer;
         cardController.id = id;
+        spriteCard.sprite = card.sprite;
         titleCard.text = card.name;
         cardController.cardName = card.name;
         cardController.description = card.description;
