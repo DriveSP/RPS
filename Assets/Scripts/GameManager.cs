@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!playerController.isPlayed || matchChecked) return;
+        if (!playerController.isPlayed || !cpuController.isPlayed || matchChecked) return;
         CheckMatch();
         matchChecked = true;
     }
