@@ -1,10 +1,13 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public bool isPlayerControlled { get; set; }
+    public Sprite sprite;
+    public Sprite back;
     public int id { get; set; }
     public bool cardFlipped { get; set; }
     public string cardName { get; set; }
@@ -12,6 +15,7 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public List<Card> strongs { get; set; }
     public List<Card> weaks { get; set; }
 
+    public bool isPlayerCard { get; set; }
     private Vector3 initialScale;
     private PlayerController playerController;
     private Animator animator;
@@ -56,7 +60,12 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         if (playerController.isPlayed) return;
         playerController.isPlayed = true;
+        playerController.cardPlayed = this.gameObject;
+        AnimationOnTable();
+    }
 
-        animator.Play("CardPlayed"+id);
+    public void AnimationOnTable()
+    {
+        animator.Play((isPlayerCard ? "CardPlayed" : "CardCpuPlayed") + id);
     }
 }

@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayZoneCpu
       objectReference: {fileID: 0}
+    - target: {fileID: 4466631960922589787, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_TagString
+      value: CPU
+      objectReference: {fileID: 0}
     - target: {fileID: 5196525944544449829, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -133,12 +137,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 5779168958091666269, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: m_Name
@@ -185,5 +209,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5131fbf164645aa468b7bceb0a3deee2, type: 2}
   - {fileID: 11400000, guid: c0c593c82cbefec40a7ba444c52dd444, type: 2}
   cardPrefab: {fileID: 7675453044038658534, guid: 7ee9e1e8165b468479fb6ea2c8063da9, type: 3}
+  cpuController: {fileID: 0}
   playerController: {fileID: 0}
+  cardOnTableCpu: []
+  randomCard: {fileID: 0}
   cardPlayed: {fileID: 0}

@@ -1,16 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : CardDealer
 {
 
-    public Card cardPlayed;
+    public GameObject cardPlayed;
     public bool HasCardsObtained => this.cardsObtained;
-    public bool isPlayed { get; set; }
-
-    void Update()
-    {
-        // Lógica específica si se requiere
-    }
+    public List<GameObject> cardOnTablePlayer;
+    public bool isPlayed;
 
     public void ObtainPlayerCards()
     {

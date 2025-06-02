@@ -6,6 +6,7 @@ using UnityEngine;
 public class Card : ScriptableObject
 {
     public Sprite sprite;
+    public Sprite back;
     public string cardName;
     public string description;
     public List<Card> strongs;

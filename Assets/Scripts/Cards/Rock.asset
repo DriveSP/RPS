@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11ef99ebc1be874f8c3c195bbdd31b0, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  sprite: {fileID: -2182124076254010665, guid: 545fdfebdb9f2fe478e0bb0901ccbd3b, type: 3}
+  sprite: {fileID: -7868141747197202483, guid: a4848a88783fea247aa709aa5560e8ee, type: 3}
+  back: {fileID: 4511374266761528325, guid: ad32686f8efd63d4cbe905680fea28ef, type: 3}
   cardName: Rock
   description: Rock Description
   strongs:
-  - {fileID: 11400000, guid: 5131fbf164645aa468b7bceb0a3deee2, type: 2}
-  weaks:
   - {fileID: 11400000, guid: c0c593c82cbefec40a7ba444c52dd444, type: 2}
+  weaks:
+  - {fileID: 11400000, guid: 5131fbf164645aa468b7bceb0a3deee2, type: 2}

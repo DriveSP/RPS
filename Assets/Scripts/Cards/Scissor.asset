@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11ef99ebc1be874f8c3c195bbdd31b0, type: 3}
   m_Name: Scissor
   m_EditorClassIdentifier: 
+  sprite: {fileID: 5238231326756076403, guid: cd799ba05afbd7848973dd124b3abc3e, type: 3}
+  back: {fileID: 4511374266761528325, guid: ad32686f8efd63d4cbe905680fea28ef, type: 3}
   cardName: Scissor
   description: Scissor Description
   strongs:

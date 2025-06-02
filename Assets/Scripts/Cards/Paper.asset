@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11ef99ebc1be874f8c3c195bbdd31b0, type: 3}
   m_Name: Paper
   m_EditorClassIdentifier: 
+  sprite: {fileID: -9211768477476511148, guid: f42264241a6d0a14b91a4fea169146a1, type: 3}
+  back: {fileID: 4511374266761528325, guid: ad32686f8efd63d4cbe905680fea28ef, type: 3}
   cardName: Paper
   description: Paper Description
   strongs:
