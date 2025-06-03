@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public abstract class CardDealer : MonoBehaviour
 {
-    [SerializeField] protected int hp;
+    [SerializeField] protected float hp, maxHp;
+    [SerializeField] protected HealthBarUI healthBar;
     [SerializeField] private List<Card> deck;
     [SerializeField] GameObject cardPrefab;
     private CpuController _cpuController;
@@ -22,6 +23,7 @@ public abstract class CardDealer : MonoBehaviour
         deckTransform = this.transform;
         _cpuController = GameObject.FindGameObjectWithTag("CPU").GetComponent<CpuController>();
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        healthBar.SetMaxHealth(maxHp);
     }
 
     public void ObtainCards(bool isPlayer)
@@ -85,9 +87,12 @@ public abstract class CardDealer : MonoBehaviour
         return source.OrderBy(x => UnityEngine.Random.value).Take(count).ToList();
     }
 
-    public virtual void LostHealth()
+    public virtual void LostHealth(float newHealth)
     {
-        hp--;
+        hp += newHealth;
+        hp = Mathf.Clamp(hp, 0, maxHp);
+
+        healthBar.SetHealth(hp);
     }
 
     public void ResetCardsObtained()

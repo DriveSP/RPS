@@ -38,8 +38,8 @@ public class CpuController : CardDealer
         isPlayed = true;
     }
 
-    public override void LostHealth()
+    public override void LostHealth(float newHealth)
     {
-        base.LostHealth();
+        base.LostHealth(newHealth);
     }
 }

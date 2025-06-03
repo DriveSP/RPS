@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1533402099427073316, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -712.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533402099427073316, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 201.63
+      objectReference: {fileID: 0}
     - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: cardPrefab
       value: 
@@ -209,7 +217,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5131fbf164645aa468b7bceb0a3deee2, type: 2}
   - {fileID: 11400000, guid: c0c593c82cbefec40a7ba444c52dd444, type: 2}
   cardPrefab: {fileID: 7675453044038658534, guid: 7ee9e1e8165b468479fb6ea2c8063da9, type: 3}
-  cpuController: {fileID: 0}
   playerController: {fileID: 0}
   cardOnTableCpu: []
   randomCard: {fileID: 0}

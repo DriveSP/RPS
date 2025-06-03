@@ -14,8 +14,8 @@ public class PlayerController : CardDealer
         ObtainCards(true);
     }
 
-    public override void LostHealth()
+    public override void LostHealth(float newHealth)
     {
-        base.LostHealth();
+        base.LostHealth(newHealth);
     }
 }

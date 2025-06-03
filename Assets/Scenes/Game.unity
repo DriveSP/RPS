@@ -1201,8 +1201,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: hp
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: maxHp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 3333061079070197756}
     - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: cpuController
       value: 
@@ -1312,6 +1320,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a29d0f0ea9fce4fa17a5c02ac047a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3333061079070197756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5914020663538736636, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+  m_PrefabInstance: {fileID: 3333061079070197753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6661fe863c233e4d8715cd084ebef0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3853308007385853037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1402,7 +1421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
       propertyPath: hp
-      value: 5
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
+      propertyPath: maxHp
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
       propertyPath: backCard
@@ -1412,6 +1435,10 @@ PrefabInstance:
       propertyPath: cardBack
       value: 
       objectReference: {fileID: 9025075341200246833, guid: b8a2cdb7469e2df48a90369f3de591ee, type: 3}
+    - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 3853308007385853038}
     - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
       propertyPath: cpuController
       value: 
@@ -1429,6 +1456,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
+--- !u!114 &3853308007385853038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1506428022020899779, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
+  m_PrefabInstance: {fileID: 3853308007385853037}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6661fe863c233e4d8715cd084ebef0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
