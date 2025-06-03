@@ -5,6 +5,8 @@ public class MenuButtons : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] CpuController cpuController;
     [SerializeField] private GameObject panelWin;
+
+    //Reset main values from CPU and Player for move on to the next round
     public void ResetMatch()
     {
         playerController.isPlayed = false;

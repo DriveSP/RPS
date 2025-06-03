@@ -48,10 +48,12 @@ public class GameManager : MonoBehaviour
         CardController playerCardController = cardPlayer.GetComponent<CardController>();
         CardController cpuCardController = cardCpu.GetComponent<CardController>();
 
-        bool playerWin = playerCardController.strongs.Any(strong => strong.cardName == cpuCardController.cardName);
+        //Compare two list. Strong list from card played by player and Weaks list from card played by CPU. If the cards match, boolean is true.
+        bool playerWin = playerCardController.strongs.Any(strong => strong.cardName == cpuCardController.cardName); 
 
         if (playerWin)
         {
+            //CPU lost health
             TMP_Text textWinUI = panelWin.transform.Find("TextWin").GetComponent<TMP_Text>();
             textWinUI.text = "Player win!";
             cpuController.LostHealth(-1);
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            
+            //Player lost health
             TMP_Text textWinUI = panelWin.transform.Find("TextWin").GetComponent<TMP_Text>();
             textWinUI.text = "CPU win or draw!";
             playerController.LostHealth(-1);

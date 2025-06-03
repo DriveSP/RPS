@@ -27,6 +27,7 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         playerController = GetComponentInParent<PlayerController>();
     }
 
+    //Zoom in
     private void IncreaseScale(bool status)
     {
         if (!isPlayerControlled) return;
@@ -38,6 +39,7 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         transform.localScale = finalScale;
     }
 
+    //Zoom in mouse hover
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
         if (!isPlayerControlled) return;
@@ -46,6 +48,7 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         IncreaseScale(true);
     }
 
+    //Zoom out mouse hover
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
         if (!isPlayerControlled) return;
@@ -54,18 +57,19 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         IncreaseScale(false);
     }
 
+    //When player click on this card, it move to the center table
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!isPlayerControlled) return;
 
         if (playerController.isPlayed) return;
         playerController.isPlayed = true;
-        playerController.cardPlayed = this.gameObject;
+        playerController.cardPlayed = this.gameObject; //Set card played by player
         AnimationOnTable();
     }
 
     public void AnimationOnTable()
     {
-        animator.Play((isPlayerCard ? "CardPlayed" : "CardCpuPlayed") + id);
+        animator.Play((isPlayerCard ? "CardPlayed" : "CardCpuPlayed") + id); //If is player, execute player animations. Else execute cpu animation
     }
 }
