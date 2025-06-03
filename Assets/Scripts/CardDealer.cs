@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public abstract class CardDealer : MonoBehaviour
 {
-    [SerializeField] private int hp;
+    [SerializeField] protected int hp;
     [SerializeField] private List<Card> deck;
     [SerializeField] GameObject cardPrefab;
     private CpuController _cpuController;
@@ -83,6 +83,11 @@ public abstract class CardDealer : MonoBehaviour
     private List<Card> GetRandomCards(List<Card> source, int count)
     {
         return source.OrderBy(x => UnityEngine.Random.value).Take(count).ToList();
+    }
+
+    public virtual void LostHealth()
+    {
+        hp--;
     }
 
     public void ResetCardsObtained()

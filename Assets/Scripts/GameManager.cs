@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         {
             TMP_Text textWinUI = panelWin.transform.Find("TextWin").GetComponent<TMP_Text>();
             textWinUI.text = "Player win!";
+            cpuController.LostHealth();
             panelWin.SetActive(true);
             Debug.Log("Player win!");
         }
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
             
             TMP_Text textWinUI = panelWin.transform.Find("TextWin").GetComponent<TMP_Text>();
             textWinUI.text = "CPU win or draw!";
+            playerController.LostHealth();
             panelWin.SetActive(true);
             Debug.Log("CPU win or draw!");
         }

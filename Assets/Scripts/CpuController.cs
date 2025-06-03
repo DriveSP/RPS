@@ -37,4 +37,9 @@ public class CpuController : CardDealer
         cardPlayed = randomCard;
         isPlayed = true;
     }
+
+    public override void LostHealth()
+    {
+        base.LostHealth();
+    }
 }
