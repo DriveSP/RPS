@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -160
+      value: -190
       objectReference: {fileID: 0}
     - target: {fileID: 5447816200293381386, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -212,6 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  maxHp: 0
+  healthBar: {fileID: 0}
   deck:
   - {fileID: 11400000, guid: 37ae52a0c96fcb345a19cc1ae25c3343, type: 2}
   - {fileID: 11400000, guid: 5131fbf164645aa468b7bceb0a3deee2, type: 2}
