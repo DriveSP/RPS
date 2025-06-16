@@ -57,6 +57,7 @@ public abstract class CardDealer : MonoBehaviour
             if (animatorCard != null)
             {
                 animatorCard.Play((isPlayer ? "Card" : "CardCpu") + cardCount); //Move to the center of the table
+                if (isPlayer) GameManager.Instance.PlaySound("deal");
             }
             else
             {

@@ -66,6 +66,7 @@ public class CardController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         playerController.isPlayed = true;
         playerController.cardPlayed = this.gameObject; //Set card played by player
         AnimationOnTable();
+        GameManager.Instance.PlaySound("put");
     }
 
     public void AnimationOnTable()

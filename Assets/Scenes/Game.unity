@@ -788,10 +788,10 @@ AudioSource:
   m_GameObject: {fileID: 763275228}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 582473771710765047, guid: e05cd0d7ee4aba3478ba1444ac59ebd8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1189,10 +1189,10 @@ AudioSource:
   m_GameObject: {fileID: 898636604}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 582473771710765047, guid: e05cd0d7ee4aba3478ba1444ac59ebd8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1451,10 +1451,10 @@ AudioSource:
   m_GameObject: {fileID: 1008214307}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 582473771710765047, guid: e05cd0d7ee4aba3478ba1444ac59ebd8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1865,10 +1865,10 @@ AudioSource:
   m_GameObject: {fileID: 1750547547}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 582473771710765047, guid: e05cd0d7ee4aba3478ba1444ac59ebd8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1973,6 +1973,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 3333061079070197756}
+    - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 305539036}
     - target: {fileID: 1919382469915334485, guid: bbf1e559b38fd1f45b1dbb4bd191f11a, type: 3}
       propertyPath: cpuController
       value: 
@@ -2201,6 +2205,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 3853308007385853038}
+    - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 305539036}
     - target: {fileID: 8220031466554760435, guid: e932af0645c54e04b8ea7bf8277b4954, type: 3}
       propertyPath: cpuController
       value: 
