@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CpuController cpuController;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject panelWin;
+    public AudioClip[] clips;
+    public AudioSource[] sources;
     private bool matchChecked = false;
     public static GameManager Instance
     {
