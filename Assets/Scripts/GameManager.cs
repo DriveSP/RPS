@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CpuController cpuController;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject panelWin;
+    [SerializeField] private Animator animatorUI;
+    [SerializeField] private GameObject[] colorsUI;
     public AudioClip[] clips;
     public AudioSource[] sources;
     private bool matchChecked = false;
@@ -73,6 +76,8 @@ public class GameManager : MonoBehaviour
             panelWin.SetActive(true);
             Debug.Log("CPU win or draw!");
             PlaySound("loseHp");
+            animatorUI.Play("Shaker");
+            colorsUI[0].SetActive(true);
         }
 
         
@@ -111,5 +116,6 @@ public class GameManager : MonoBehaviour
     public void ResetMatchChecked()
     {
         matchChecked = false;
+        colorsUI[0].SetActive(false);
     }
 }
